@@ -1,0 +1,471 @@
+//1.Print Helloworld
+#include <stdio.h>
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}
+
+
+//2.Print a Number
+#include <stdio.h>
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    printf("You entered: %d\n", num);
+    return 0;
+}
+
+
+//3.Add Two Numbers
+#include <stdio.h>
+int main() {
+    int num1, num2, sum;
+    printf("Enter two integers: ");
+    scanf("%d %d", &num1, &num2);
+    sum = num1 + num2;
+    printf("Sum: %d\n", sum);
+    return 0;
+}
+
+
+//4.Single-Line Comments
+#include <stdio.h>
+int main() {
+    // This is a single-line comment
+    printf("Hello, World!\n"); // Prints a greeting message
+    return 0;
+}
+
+
+//5.Multi-Line Comments
+#include <stdio.h>
+int main() {
+    /* 
+       This is a multi-line comment.
+       It can be used for longer descriptions or notes.
+    */
+    printf("Hello, World!\n");
+    return 0;
+}
+
+
+//6.Print the Sum of Two Numbers
+#include <stdio.h>
+int main() {
+    int a = 5, b = 10, sum;
+    sum = a + b;
+    printf("The sum of %d and %d is %d\n", a, b, sum);
+    return 0;
+  }
+
+
+//7.Swap Two Numbers
+#include <stdio.h>
+int main() {
+    int a, b, temp;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+    temp = a;
+    a = b;
+    b = temp;
+    printf("After swapping: a = %d, b = %d\n", a, b);
+    return 0;
+}
+
+
+//8.Check Even or Odd
+#include <stdio.h>
+int main() {
+    int num;
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+    if (num % 2 == 0) {
+        printf("%d is even.\n", num);
+    } else {
+        printf("%d is odd.\n", num);
+    }
+    return 0;
+}
+
+
+//9.Multiple of Two numbers
+#include <stdio.h>
+int main() {
+    int num1, num2, result;
+    // Input two numbers
+    printf("Enter the first number: ");
+    scanf("%d", &num1);
+    printf("Enter the second number: ");
+    scanf("%d", &num2);
+    // Calculate the multiple
+    result = num1 * num2;
+    // Print the result
+    printf("The multiple of %d and %d is %d\n", num1, num2, result);
+    return 0;
+}
+
+
+//10.Print Multiplication Table
+#include <stdio.h>
+int main() {
+    int num, i;
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+    for (i = 1; i <= 10; ++i) {
+        printf("%d x %d = %d\n", num, i, num * i);
+    }
+    return 0;
+}
+
+
+//11.Calculate the Area of a Rectangle
+#include <stdio.h>
+int main() {
+    int length, width, area;
+    printf("Enter length and width of the rectangle: ");
+    scanf("%d %d", &length, &width);
+    area = length * width;
+    printf("Area of the rectangle: %d\n", area);
+    return 0;
+}
+
+
+//12.Calculate the Perimeter of a Rectangle
+#include <stdio.h>
+int main() {
+    int length, width, perimeter;
+    printf("Enter length and width of the rectangle: ");
+    scanf("%d %d", &length, &width);
+    perimeter = 2 * (length + width);
+    printf("Perimeter of the rectangle: %d\n", perimeter);
+    return 0;
+}
+
+
+
+//13.Calculate the Area of a Circle
+#include <stdio.h>
+#define PI 3.14
+int main() {
+    float radius, area;
+    printf("Enter the radius of the circle: ");
+    scanf("%f", &radius);
+    area = PI * radius * radius;
+    printf("Area of the circle: %.2f\n", area);
+    return 0;
+}
+
+
+//14.Find the Square of a Number
+#include <stdio.h>
+int main() {
+    int num, square;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    square = num * num;
+    printf("Square of %d is %d\n", num, square);
+    return 0;
+}
+
+
+//15.Reverse a Number
+#include <stdio.h>
+int main() {
+    int num, reversed = 0, remainder;
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+    while (num != 0) {
+        remainder = num % 10;
+        reversed = reversed * 10 + remainder;
+        num /= 10;
+    }
+    printf("Reversed number: %d\n", reversed);
+    return 0;
+}
+
+
+//16.Print ASCII Value of a Character
+#include <stdio.h>
+int main() {
+    char c;
+    printf("Enter a character: ");
+    scanf("%c", &c);
+    printf("ASCII value of '%c' is %d\n", c, c);
+    return 0;
+}
+
+
+//17.Find the Average of Two Numbers
+#include <stdio.h>
+int main() {
+    int num1, num2;
+    float average;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+    average = (num1 + num2) / 2.0;
+    printf("Average of %d and %d is %.2f\n", num1, num2, average);
+    return 0;
+}
+
+
+
+//18.Find the Largest of Three Numbers
+#include <stdio.h>
+int main() {
+    int num1, num2, num3;
+    printf("Enter three integers: ");
+    scanf("%d %d %d", &num1, &num2, &num3);
+    if (num1 >= num2 && num1 >= num3) {
+        printf("%d is the largest number.\n", num1);
+    } else if (num2 >= num1 && num2 >= num3) {
+        printf("%d is the largest number.\n", num2);
+    } else {
+        printf("%d is the largest number.\n", num3);
+    }
+    return 0;
+}
+
+
+//19.Check if a Number is Prime
+#include <stdio.h>
+int main() {
+    int num, i, isPrime = 1;
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+    if (num <= 1) {
+        isPrime = 0;
+    } else {
+        for (i = 2; i <= num / 2; ++i) {
+            if (num % i == 0) {
+                isPrime = 0;
+                break;
+            }
+        }
+    }
+
+    if (isPrime) {
+        printf("%d is a prime number.\n", num);
+    } else {
+        printf("%d is not a prime number.\n", num);
+    }
+
+    return 0;
+}
+
+
+
+//20.Convert Celsius to Fahrenheit
+#include <stdio.h>
+int main() {
+    float celsius, fahrenheit;
+    printf("Enter temperature in Celsius: ");
+    scanf("%f", &celsius);
+    fahrenheit = (celsius * 9 / 5) + 32;
+    printf("%.2f Celsius is %.2f Fahrenheit\n", celsius, fahrenheit);
+    return 0;
+}
+
+
+//21.Conver hour into minutes
+#include <stdio.h>
+
+int main() {
+    int hours, minutes;
+    printf("Enter time in hours: ");
+    scanf("%d", &hours);
+    minutes = hours * 60;
+    printf("%d hours is %d minutes\n", hours, minutes);
+    return 0;
+}
+
+
+//21.Conver hour into minutes
+#include <stdio.h>
+
+int main() {
+    int hours, minutes;
+    printf("Enter time in hours: ");
+    scanf("%d", &hours);
+    minutes = hours * 60;
+    printf("%d hours is %d minutes\n", hours, minutes);
+    return 0;
+}
+
+
+//22.Convert Minutes to Seconds
+#include <stdio.h>
+int main() {
+    int minutes, seconds;
+    printf("Enter time in minutes: ");
+    scanf("%d", &minutes);
+    seconds = minutes * 60;
+    printf("%d minutes is equal to %d seconds.\n", minutes, seconds);
+    return 0;
+}
+
+
+//23.Find the Remainder
+#include <stdio.h>
+int main() {
+    int dividend, divisor, remainder;
+    printf("Enter dividend and divisor: ");
+    scanf("%d %d", &dividend, &divisor);
+    remainder = dividend % divisor;
+    printf("Remainder when %d is divided by %d is %d\n", dividend, divisor, remainder);
+    return 0;
+}
+
+
+//24.Calculate Simple Interest
+#include <stdio.h>
+int main() {
+    float principal, rate, time, simpleInterest;
+    printf("Enter principal amount, rate, and time: ");
+    scanf("%f %f %f", &principal, &rate, &time);
+    simpleInterest = (principal * rate * time) / 100;
+    printf("Simple Interest: %.2f\n", simpleInterest);
+    return 0;
+}
+
+
+//25.Check if a Number is Positive or Negative
+#include <stdio.h>
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    if (num > 0) {
+        printf("%d is positive.\n", num);
+    } else if (num < 0) {
+        printf("%d is negative.\n", num);
+    } else {
+        printf("The number is zero.\n");
+    }
+    return 0;
+}
+
+
+//26.Calculate the Square Root of a Number
+#include <stdio.h>
+#include <math.h>
+int main() {
+    double num, result;
+    printf("Enter a number: ");
+    scanf("%lf", &num);
+    result = sqrt(num);
+    printf("Square root of %.2f is %.2f\n", num, result);
+    return 0;
+}
+
+
+//27.Convert Inches to Centimeters
+#include <stdio.h>
+int main() {
+    float inches, centimeters;
+    printf("Enter length in inches: ");
+    scanf("%f", &inches);
+    centimeters = inches * 2.54;
+    printf("%.2f inches is equal to %.2f centimeters.\n", inches, centimeters);
+    return 0;
+}
+
+
+//28.Calculate the Area of a Square
+#include <stdio.h>
+int main() {
+    int side, area;
+    printf("Enter the side length of the square: ");
+    scanf("%d", &side);
+    area = side * side;
+    printf("Area of the square: %d\n", area);
+    return 0;
+}
+
+
+//29.Calculate the Perimeter of a Square
+#include <stdio.h>
+int main() {
+    int side, perimeter;
+    printf("Enter the side length of the square: ");
+    scanf("%d", &side);
+    perimeter = 4 * side;
+    printf("Perimeter of the square: %d\n", perimeter);
+    return 0;
+}
+
+
+//30.Convert Days to Weeks
+#include <stdio.h>
+int main() {
+    int days, weeks;
+    printf("Enter number of days: ");
+    scanf("%d", &days);
+    weeks = days / 7;
+    printf("%d days is equal to %d weeks.\n", days, weeks);
+    return 0;
+}
+
+
+//31.Find the Cube of a Number
+#include <stdio.h>
+int main() {
+    int num, cube;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    cube = num * num * num;
+    printf("Cube of %d is %d\n", num, cube);
+    return 0;
+}
+
+
+//32.Print Numbers from 1 to 10
+#include <stdio.h>
+int main() {
+    int i;
+    for (i = 1; i <= 10; ++i) {
+        printf("%d\n", i);
+    }
+    return 0;
+}
+
+
+//33.Convert Hours to Days
+#include <stdio.h>
+int main() {
+    int hours, days;
+    printf("Enter time in hours: ");
+    scanf("%d", &hours);
+    days = hours / 24;
+    printf("%d hours is equal to %d days.\n", hours, days);
+    return 0;
+}
+
+
+//34.Check if a Character is an Alphabet
+#include <stdio.h>
+#include <ctype.h>
+int main() {
+    char c;
+    printf("Enter a character: ");
+    scanf(" %c", &c);
+    if (isalpha(c)) {
+        printf("'%c' is an alphabet.\n", c);
+    } else {
+        printf("'%c' is not an alphabet.\n", c);
+    }
+    return 0;
+}
+
+
+//35.Find the Length of a String
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    scanf("%s", str);
+    printf("Length of the string is: %lu\n", strlen(str));
+    return 0;
+}
+
